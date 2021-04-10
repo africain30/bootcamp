@@ -16,6 +16,8 @@ class book:
           starter=list(self.recipe_list["starter"])
           lunch=list(self.recipe_list["lunch"])
           dessert=list(self.recipe_list["dessert"])
+          if matching(starter,lunch) or matching(lunch,dessert) or matching(dessert,starter):
+            return "There are matching names in your recipe type list"
           if name in starter:
               return self.recipe_list["starter"][name]
           elif name in lunch:
@@ -42,3 +44,11 @@ class book:
             return " Before adding a recipe , please create one "
         self.recipe_list[recipe.recipe_type][recipe.recipe_name]=recipe
         self.last_update = datetime.datetime.now()
+              
+              
+              
+              
+def matching(d1,d2):
+    for i in d1:
+        if i in d2:
+            return True              

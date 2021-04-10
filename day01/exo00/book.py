@@ -1,6 +1,6 @@
 import datetime
 from recipe import Recipe
-class book:
+class Book:
        def __init__(self,name ,last_update ,creation_date ,recipes_list):
            if type(name)!=str or name=="":
                raise ValueError

@@ -31,3 +31,4 @@ class EVALUATOR:
             
         if len(words)!=len(coeffs):
             raise -1
+    """la fonction enumarate n'esr pas encore complete"""
